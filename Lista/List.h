@@ -6,7 +6,7 @@ template <class T>
 struct Node{
   T data;
   struct Node *next;
-  
+
   Node(T dat){
     data = dat;
     next = nullptr;
@@ -35,7 +35,8 @@ class List{
     int size();
     bool isEmpty();
     void clear();
-    
+    Node<T>* getStart();
+
 };
 
 #include "List.hxx"

@@ -153,7 +153,7 @@ void List<T>::pop_back(){
 */
 template <class T>
 void List<T>::pop_front(){
-  
+
   if( this->isEmpty() ){
     std::cout<<"The list is empty"<<std::endl;
   }else{
@@ -162,7 +162,7 @@ void List<T>::pop_front(){
     delete(aux);
     this->listSize--;
   }
-  
+
 }
 
 /*
@@ -234,7 +234,7 @@ int List<T>::size(){
   Nombre función: isEmpty
   Descripción: Determina si la lista está vacía.
   Parámetros: Ninguno.
-  Retorna: 
+  Retorna:
     *TRUE si el inicio de la lista es nulo.
     *FALSE si el inicio de la lista no es nulo.
 */
@@ -260,5 +260,18 @@ void List<T>::clear(){
   }
   this->start = nullptr;
   this->listSize = 0;
+
+}
+
+/*
+  Nombre función: getStart
+  Descripción: Entrega el inicio de la lista para poder hacer operaciones externas con la misma.
+  Parámetros: Ninguno.
+  Retorna: Apuntador al nodo inicial de la lista.
+*/
+template <class T>
+Node<T>* List<T>::getStart(){
+
+  return this->start;
 
 }
